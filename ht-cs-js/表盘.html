@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            margin: 100px auto;
+            background-color: bisque;
+            position: relative;
+        }
+        .m{
+            width: 1px;
+            height: 100px;
+            background-color: black;
+            margin: auto;
+            transform: rotate(0deg);
+            transform-origin: left bottom;
+        }
+        h5{
+            color: black;
+            position: absolute;
+            font-size: 20px;
+        }
+        .top{
+            top: -25px;
+            left:90px;
+        }
+        .right{
+            right: 10px;
+            top: 50px;
+        }
+        .bottom{
+            bottom: -25px;
+            left: 90px;
+        }
+        .left{
+            left: 10px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="m"></div>
+        <h5 class="top">12</h5>
+        <h5 class="right">3</h5>
+        <h5 class="bottom">6</h5>
+        <h5 class="left">9</h5>
+    </div>
+    <script>
+        var om=document.querySelector('.m');
+        var i=0;
+        function fun(){
+            i+=6;
+            // setCss3(om,{transform:"rotate("+i+"deg)"},1000);
+            om.style.transform="rotate("+i+"deg)";
+            // om.style.backgroundColor='pink';
+            // console.log(i);
+        };
+        setInterval(fun,1000)
+    </script>
+</body>
+</html>
