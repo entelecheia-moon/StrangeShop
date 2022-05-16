@@ -14,13 +14,28 @@
             background-color: bisque;
             position: relative;
         }
-        .m{
+        .m,
+        .s,
+        .f{
+            position: absolute;
             width: 1px;
-            height: 100px;
+            height: 90px;
             background-color: black;
-            margin: auto;
+            /* margin: auto; */
             transform: rotate(0deg);
             transform-origin: left bottom;
+            top: 10px;
+            left: 100px;
+        }
+        .s{
+            height: 60px;
+            top: 40px;
+            background-color: red;
+        }
+        .f{
+            height: 80px;
+            top: 20px;
+            background-color: blue;
         }
         h5{
             color: black;
@@ -47,6 +62,8 @@
 </head>
 <body>
     <div class="box">
+        <div class="s"></div>
+        <div class="f"></div>
         <div class="m"></div>
         <h5 class="top">12</h5>
         <h5 class="right">3</h5>
@@ -55,15 +72,34 @@
     </div>
     <script>
         var om=document.querySelector('.m');
-        var i=0;
+        var os=document.querySelector('.s');
+        var of=document.querySelector('.f');
+        var date = new Date();
+        // console.log(date);
+        // console.log(date.getHours());    //时
+        // console.log(date.getMinutes());  //分
+        // console.log(date.getSeconds());  //秒
+        var s=date.getHours();
+        var f=date.getMinutes();
+        if(s>=12){
+            s=s-12;
+            s=s*30;
+        }
+        f=f*6;
+        var i=date.getSeconds();
+        i=i*6;
+        om.style.transform="rotate("+i+"deg)";
+        console.log(i);
         function fun(){
             i+=6;
-            // setCss3(om,{transform:"rotate("+i+"deg)"},1000);
             om.style.transform="rotate("+i+"deg)";
-            // om.style.backgroundColor='pink';
-            // console.log(i);
         };
-        setInterval(fun,1000)
+        setInterval(fun,1000);
+        os.style.transform="rotate("+s+"deg)";
+        of.style.transform="rotate("+f+"deg)";
+
+
+        
     </script>
 </body>
 </html>
