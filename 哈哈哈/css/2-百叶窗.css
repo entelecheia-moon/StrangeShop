@@ -1,0 +1,161 @@
+body {
+    min-width: 1200px;
+    max-width: 1300px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: linear-gradient( to right bottom, pink, rgb(252, 252, 86));
+    height: 1200px;
+}
+.left,
+.right {
+    width: 50%;
+    height: 100vh;
+    line-height: 100vh;
+    color: black;
+    font-size: 100px;
+    z-index: 999;
+    /* float: left; */
+}
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right;
+    animation: left 0.8s   forwards ;
+    background-image: linear-gradient( to right bottom, blue, pink);
+}
+.right {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-align: left;
+    /* transform: translateX(50%); */
+    animation: right 0.8s forwards ;
+    background-image: linear-gradient( to right bottom, pink, blue);
+}
+@keyframes left {
+    0% {
+
+    }
+    100% {
+        transform: translateX(-1200px);
+    }
+}
+@keyframes right {
+    100% {
+        transform: translateX(1200px);
+    }
+}
+li {
+    list-style: none;
+}
+.box {
+    width: 1000px;
+    height: 380px;
+    margin: 100px auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.box  li {
+    float: left;
+    width: 200px;
+    height: 380px;
+    transition: all 0.3s;
+}
+.box li img {
+    width: 640px;
+    height: 400px;
+}
+.box:hover li {
+    width: 64px;
+} 
+.box li:hover {
+    width: 640px;
+}
+/* 导航栏 */
+a {
+    text-decoration: none;
+}
+.nav {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 80px;
+    height: 350px;
+    border-radius: 10px;
+    transition: .3s;
+    overflow: hidden;
+    background-image: linear-gradient(pink,rgb(127, 123, 241));
+}
+.nbv {
+    display: block;
+    height: 70px;
+    width: 85%;
+    margin-left: 9px;
+    border-radius: 5px;
+    position: relative;
+    transition: .3s;
+    color: wheat;
+}
+.nbv i {
+    font-size: 40px;
+    position: absolute;
+    margin: 4px 0 0 13px;
+}
+.nbv span {
+    position: relative;
+    top: 22px;
+    left: 80px;
+    font: 400 20px '';
+    opacity: 0;
+    transition: .1s;
+    color: thistle;
+}
+.nav:hover{
+    width: 270px;
+}
+.nav .nbv:hover{
+    background-color: rgb(67, 56, 202);
+}
+/* 翻页动画 */
+.fydh{
+    width: 270px;
+    height: 420px;
+    margin: 0 auto;
+    /* position: absolute;
+    top: 150px; */
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: 1.8s;
+}
+.fydh .b,.c,.d,.e,.f{
+    width: 270px;
+    height: 400px;
+    position: absolute;
+    /* 这是翻页的起点，在左边 */
+    transform-origin: left;
+    background-size: cover;
+    /* 这是翻页时元素之间的延迟 */
+    transition: calc(var(--i)*.3s);
+    /* 这是翻页时元素的层级 */
+    z-index: calc(var(--i)*99);
+}
+.fydh .b,.c{
+    border: solid 20px #576574;
+    border-left: none;
+    top: -20px;
+    border-radius: 0 20px 20px 0;
+}
+.fydh:hover .b{
+    border-left: #576574 20px solid;
+}
+.fydh:hover .c,.fydh:hover .d,.fydh:hover .e,.fydh:hover .f{
+    transform: rotateY(-180deg);
+    /* 此时翻页的顺序会倒过来，所以我们的延迟和层级也要反一下 */
+    transition: calc(var(--s)*.4s);
+    z-index: calc(var(--s)*-99);
+}
+.fydh:hover{
+    transform: translateX(100px);
+}

@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 渐变背景 */
+    background: linear-gradient(200deg,green,#00c6fb);
+}
+#plane {
+    color: #fff;
+    font-size: 70px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

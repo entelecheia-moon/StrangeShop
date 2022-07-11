@@ -1,0 +1,170 @@
+body {
+  background-image: linear-gradient(to bottom, #114357, #f29492);
+  height: 1200px;
+}
+.header {
+  width: 100vh;
+  height: 60px;
+  background-color: #114357;
+}
+.header a {
+  padding-left: 20px;
+  line-height: 60px;
+  color: black;
+  font-size: 30px;
+}
+.banner {
+  width: 960px;
+  height: 540px;
+  background-size: 960px 540px;
+  background-color: pink;
+  margin: 0px auto;
+  position: relative;
+  overflow: hidden;
+}
+.banner .bg_first,
+.banner .bg_second {
+  width: 80px;
+  height: 140px;
+  background-color: powderblue;
+  margin: auto;
+  transition: all 0.3s;
+}
+.banner .bg_first:hover + .bg_second {
+  background-color: saddlebrown;
+}
+.banner .circle {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+}
+.banner .circle a {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin: 0 20px;
+  background-image: linear-gradient(#c2e59c, #64b3f4);
+}
+.banner .circle a:nth-child(1):hover .bg_first {
+  background-color: royalblue;
+}
+.banner .circle .first:hover ~ .bg_first {
+  background-color: rosybrown;
+}
+nav {
+  margin: 20px auto;
+}
+nav ul {
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+}
+nav ul li {
+  float: left;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  margin-right: 150px;
+}
+
+.second {
+  transform: translate3d(0,0,0);
+}
+.second-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.second-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+.second-item-text {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.front {
+    background: url(../images/text-nav1.jpg);
+    background-size: 300px 400px;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.back {
+  background-image: linear-gradient(#c2e59c, #64b3f4);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.second-box:hover .front {
+  z-index: 1; 
+  transform: rotateY(180deg); 
+} 
+.second-box:hover .back {
+ z-index: 2;
+ transform: rotateY(0deg); 
+} 
+
+
+
+
+
+
+/* 结束 */
+nav ul li:nth-child(3n) {
+  margin-right: 0;
+}
+nav ul li:nth-child(4) {
+  margin-left: 50px;
+}
+nav ul li:nth-child(4):hover + .first {
+  transform: rotate(180deg);
+}
+nav ul li:nth-child(n+4) {
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: transparent;
+  background-image: linear-gradient(to right bottom, #114357, #f29492);
+}
+nav ul li:nth-child(5) {
+  margin-left: 100px;
+}
+nav ul li:nth-child(6) {
+  margin-left: 100px;
+}
+nav ul .first {
+  background: url(../images/text-nav1.jpg) no-repeat;
+  background-size: 300px 400px;
+  position: relative;
+  overflow: hidden;
+}
+nav ul .first a {
+  display: block;
+  margin: 10px 0 50px 50px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 120px;
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+}
+nav ul .first p {
+  text-align: center;
+  line-height: 26px;
+  font-size: 16px;
+}
