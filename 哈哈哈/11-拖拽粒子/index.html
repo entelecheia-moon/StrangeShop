@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>DaisyJS: Particle System Example</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: linear-gradient(rgba(193, 35, 35, 0.71), rgba(32, 39, 216, 0.71)), url(one.png) !important;
+            background-size: cover;
+        }
+
+        #carbonads a {
+            color: #fff;
+            text-decoration: none
+        }
+
+        #carbonads a:hover {
+            color: #fff
+        }
+
+
+        /**  
+ * DaisyJS Demo Styles
+ * by Waren Gonzaga
+ */
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            line-height: 1.3;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        #momoland {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            position: absolute;
+            left: 0;
+            top: 15%;
+            padding: 0 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .wrapper>img {
+            width: 200px;
+            height: auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 100px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            margin-bottom: -10px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            width: 39%;
+            margin: 0 auto;
+            line-height: 24px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background: transparent;
+            color: white;
+            font-size: 19px;
+            cursor: pointer;
+            border-radius: 50px;
+            outline: none;
+            border: 2px solid white;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.5s ease-in-out;
+        }
+
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="momoland">
+        <div class="wrapper">
+            <br><br><br>
+            <div id="carbon-block"></div>
+            <div>
+            </div>
+        </div>
+    </div>
+
+    <script src="daisy.js" defer></script>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            daisyjs(document.getElementById('momoland'), {
+                dotColor: '#fff',
+                lineColor: '#ddd'
+            });
+        }, false);
+    </script>
+</body>
+
+</html>
